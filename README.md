@@ -1,4 +1,4 @@
-Object Oriented Ship Battling, Ahem Programming
+Object Oriented Ship Battling, Ahem Programming test
 ===============================================
 
 This repository holds the screencast code, script and blueprints for a
