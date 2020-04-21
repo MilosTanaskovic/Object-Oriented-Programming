@@ -38,6 +38,13 @@ class Ship{
         }
         
     }
+
+    // Objects Interact
+    public function doesGivenShipHaveMoreStrength($givenShip) {
+
+        // todo...
+        return $givenShip->strenght > $this->strenght;
+    }
 }
 
 // Multiple Objects
@@ -58,15 +65,22 @@ class Ship{
 
 
 $myShip = new Ship(); 
-$myShip->name = 'Jadi Starship';
+$myShip->name = 'Jadi Starship ';
 $myShip->weaponPower = 10;
+$myShip->strenght = 100;
 
 $otherShip = new Ship();
-$otherShip->name = 'Something else';
+$otherShip->name = 'John ';
 $otherShip->weaponPower = 5;
 $otherShip->strenght = 50;
 
 printShipSummary($myShip);
 echo '<hr/>';
 printShipSummary($otherShip);
+echo '<hr/>';
 
+if ($myShip->doesGivenShipHaveMoreStrength($otherShip)){
+    echo $otherShip->name. 'has more strenght';
+}else {
+    echo $myShip->name. 'has more strenght';
+}
