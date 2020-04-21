@@ -2,20 +2,16 @@
 
 class Ship{
     
-    public $name;
-    public $weaponPower = 0;
-    public $jediFactor = 0;
-    public $strenght = 0;
+    private $name;
+    private $weaponPower = 0;
+    private $jediFactor = 0;
+    private $strenght = 0;
 
     // Method 
     public function sayHello(){
         echo 'Hello';
     }
-    
-    public function getName(){
 
-        return $this->name;
-    }
 
     public function getNameAndSpecs($useShortFormat = false){
 
@@ -45,4 +41,47 @@ class Ship{
         // todo...
         return $givenShip->strenght > $this->strenght;
     }
+
+    // setter and getter
+    public function setStrenght($strenght){
+        
+        if(!is_numeric($strenght)){
+            throw new Exception('Invalid pass strenght'.$strenght);
+        }
+        $this->strenght = $strenght;
+    }
+    public function getStrenght(){
+        return $this->strenght;
+    }
+
+    public function getName(){
+
+        return $this->name;
+    }
+    public function setName($name){
+        $this->name = $name;
+    }
+
+    public function getWeaponPower(){
+        return $this->weaponPower;
+    }
+    public function setWeaponPower($weaponPower){
+
+        if(!is_numeric($weaponPower)){
+            throw new Exception('Invalid pass weaponPower'.$weaponPower);
+        }
+        $this->weaponPower = $weaponPower;
+    }
+
+    public function getJediFactor(){
+        return $this->jediFactor;
+    }
+    public function setJediFactor($jediFactor){
+
+        if(!is_numeric($jediFactor)){
+            throw new Exception('Invalid pass JediFactor'.$jediFactor);
+        }
+        $this->jediFactor = $jediFactor;
+    }
+
 }
