@@ -1,3 +1,19 @@
+OOP Track Overview
+===============================================
+Prerequisites
+-----
+* Comfortable with programming in PHP itself
+* Basic knowledge og working with a database
+
+After this track, what will we level be!
+-----
+* We'll be ready to bring object-oriented coding into us projecs immediately.
+* We'll be able to comfortable apply all the OO basics, like creating classes, handling properties and methods, visibility and instantiating objects.
+* Beyond just using classes, the idea of 'dependency injection' will be clear
+* For organization, the idea of a 'dependency injection container' will be clearing, allowing 
+we to create many objects, but keep them organized.
+* We'll feel comfortable applying more advanced ideas, like abstract classes and interfaces.
+
 Object Oriented Ship Battling, Ahem Programming test
 ===============================================
 
