@@ -1,6 +1,10 @@
 <?php
 require __DIR__.'/bootstrap.php';
 
+$container = new Container($configuration);
+$pdo = $container->getPDO();
+
+$shipLoader = new ShipLoader($pdo);
 $ships = $shipLoader->getShips();
 //var_dump($ships);die();
 
