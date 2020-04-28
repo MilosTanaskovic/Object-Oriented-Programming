@@ -40,6 +40,22 @@ public function findOneById($id){
     var_dump($shipArray);die();
 }
 
+private function createShipFromData(array $shipData){
+
+    if($shipData['team'] == 'rebel'){
+        $ship = new RebelShip($shipData['name']);
+    }else {
+        $ship = new Ship($shipData['name']);
+    }
+
+    $ship->setId($shipData['id']);
+    $ship->setWeaponPower($shipData['weapon_power']);
+    $ship->setJediFactor($shipData['jedi_factor']);
+    $ship->setStrenght($shipData['strength']);
+
+    return $ship;
+}
+
 private function queryForShips(){
 
     $pdo = $this->getPDO();
