@@ -46,11 +46,12 @@ private function createShipFromData(array $shipData){
         $ship = new RebelShip($shipData['name']);
     }else {
         $ship = new Ship($shipData['name']);
+        $ship->setJediFactor($shipData['jedi_factor']);
     }
 
     $ship->setId($shipData['id']);
     $ship->setWeaponPower($shipData['weapon_power']);
-    $ship->setJediFactor($shipData['jedi_factor']);
+    
     $ship->setStrenght($shipData['strength']);
 
     return $ship;
