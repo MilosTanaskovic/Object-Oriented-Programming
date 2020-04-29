@@ -15,7 +15,9 @@ class Ship extends AbstractShip{
         return !$this->underRepair;
     }
 
-    
+    public function getJediFactor(){
+        return $this->jediFactor;
+    }
 
     public function setJediFactor($jediFactor){
 

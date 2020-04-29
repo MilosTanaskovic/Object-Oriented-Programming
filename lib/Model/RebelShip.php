@@ -14,6 +14,9 @@ class RebelShip extends AbstractShip{
 
         return 'Rebel';
     }
+    public function getJediFactor(){
+        return $this->jediFactor;
+    }
 
     public function isFunctional(){
         return true;

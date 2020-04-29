@@ -1,11 +1,15 @@
 <?php
 
-class AbstractShip {
+abstract class AbstractShip {
     private $id;
     private $name;
     private $weaponPower = 0;
     private $jediFactor = 0;
     private $strenght = 0;
+
+    abstract public function getJediFactor();
+    abstract public function getType();
+    abstract public function isFunctional();
     
 
     public function __construct($name){
@@ -80,10 +84,6 @@ class AbstractShip {
         $this->weaponPower = $weaponPower;
     }
 
-    
-    public function getJediFactor(){
-        return $this->jediFactor;
-    }
 
     /**
      * @return integer
