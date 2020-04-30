@@ -6,8 +6,8 @@ $container = new Container($configuration);
 $shipLoader = $container->getShipLoader();
 $ships = $shipLoader->getShips();
 
-$rebelShip = new RebelShip('fddsd');
-$ships[] = $rebelShip;
+$brokenShip = new BrokenShip('Just a hunk of metal');
+$ship[] = $brokenShip;
 //var_dump($rebelShip->getFavoritedJedi());die();
 
 $errorMessage = '';
